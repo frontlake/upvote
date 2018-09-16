@@ -23,18 +23,18 @@
       <article class="media">
         <figure class="media-left is-hidden-mobile">
           <div class="image is-64x64">
-            <img src="https://hollowtree.gallerycdn.vsassets.io/extensions/hollowtree/vue-snippets/0.1.9/1536163208133/Microsoft.VisualStudio.Services.Icons.Default">
+            <img v-bind:src="submissions[0].submissionImage">
           </div>
         </figure>
         <div class="media-content">
           <div class="content">
             <p>
-              <strong>Vue</strong> <small><a href="https://vuejs.org">@vuejs.org</a></small> <small class="tag is-primary">vuejs</small>
+              <strong>{{ submissions[0].title }}</strong> <small><a v-bind:href="submissions[0].url">@vuejs.org</a></small> <small class="tag is-primary">{{ submissions[0].tag }}</small>
               <br>
-              Vue is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable.
+              {{ submissions[0].description }}
             </p>
-            <p>Submitted by: <img class="image is-24x24" src="https://randomuser.me/api/portraits/thumb/men/47.jpg" alt="user photo">
-              John Denver</p>
+            <p>Submitted by: <img class="image is-24x24" v-bind:src="submissions[0].avatar" alt="user photo">
+              {{ submissions[0].submitter }}</p>
           </div>
         </div>
         <div class="media-right has-text-centered">
@@ -43,13 +43,15 @@
               <i class="far fa-thumbs-up"></i>
             </span>
           </button>
-          <p class="has-text-link has-text-centered">10</p>
+          <p class="has-text-link has-text-centered">{{ submissions[0].votes }}</p>
         </div>
       </article>
 
     </div>
   </main>
   <script src="https://unpkg.com/vue"></script>
+  <script src="./seed.js"></script>
+  <script src="./main.js"></script>
 </body>
 
 </html>
