@@ -20,7 +20,7 @@
     <div id="app">
       <h3 class="subtitle has-text-centered">Vote for Your favorite framework</h3>
 
-      <article v-for="submission in submissions" v-bind:key="submission.id" class="media">
+      <article v-for="submission in sortedSubmissions" v-bind:key="submission.id" class="media">
         <figure class="media-left is-hidden-mobile">
           <div class="image is-64x64">
             <img v-bind:src="submission.submissionImage">
@@ -38,7 +38,7 @@
           </div>
         </div>
         <div class="media-right has-text-centered">
-          <button class="button is-link is-outlined">
+          <button v-on:click="upvote(submission.id)" class="button is-link is-outlined">
             <span class="icon">
               <i class="far fa-thumbs-up"></i>
             </span>
@@ -52,7 +52,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>UpVote</strong> by <a href="https://github.com/frontlake">lake</a>. The source code is available on <a href="https://github.com/frontlake/upvote">GitHub</a>.
+        <strong>UpVote!</strong> by <a href="https://github.com/frontlake">lake</a>. The source code is available on <a href="https://github.com/frontlake/upvote">GitHub</a>.
       </p>
     </div>
   </footer>
