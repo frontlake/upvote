@@ -5,7 +5,8 @@ const submission = [{
   url: 'https://vuejs.org',
   submissionImage: 'https://hollowtree.gallerycdn.vsassets.io/extensions/hollowtree/vue-snippets/0.1.9/1536163208133/Microsoft.VisualStudio.Services.Icons.Default',
   votes: 10,
-  avatar: 'https://randomuser.me/api/portraits/thumb/men/47.jpg'
+  avatar: 'https://randomuser.me/api/portraits/thumb/men/47.jpg',
+  submitter: 'John Denver'
 }, {
   tag: 'reactjs',
   title: 'React',
@@ -13,7 +14,8 @@ const submission = [{
   url: 'https://reactjs.org',
   submissionImage: 'https://www.shareicon.net/data/128x128/2016/07/08/117367_logo_512x512.png',
   votes: 15,
-  avatar: 'https://randomuser.me/api/portraits/thumb/women/26.jpg'
+  avatar: 'https://randomuser.me/api/portraits/thumb/women/26.jpg',
+  submitter: 'Regina Perez'
 }, {
   tag: 'angularjs',
   title: 'Angular',
@@ -21,7 +23,8 @@ const submission = [{
   url: 'https://angular.io',
   submissionImage: 'https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/300/square_128/angular2.png',
   votes: 14,
-  avatar: 'https://randomuser.me/api/portraits/thumb/men/55.jpg'
+  avatar: 'https://randomuser.me/api/portraits/thumb/men/55.jpg',
+  submitter: 'Jim Snow'
 }, {
   tag: 'svelte',
   title: 'Svelte',
@@ -29,5 +32,6 @@ const submission = [{
   url: 'https://svelte.technology',
   submissionImage: 'https://storage.googleapis.com/pwa-directory.appspot.com/128_5701736371585024.png',
   votes: 6,
-  avatar: 'https://randomuser.me/api/portraits/thumb/women/12.jpg'
+  avatar: 'https://randomuser.me/api/portraits/thumb/women/12.jpg',
+  submitter: 'Mia Davis'
 }];
