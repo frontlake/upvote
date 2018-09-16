@@ -1,5 +1,6 @@
 window.Seed = (function () {
   const submissions = [{
+    id: 1,
     tag: 'vuejs',
     title: 'Vue',
     description: 'Vue is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable.',
@@ -9,6 +10,7 @@ window.Seed = (function () {
     avatar: 'https://randomuser.me/api/portraits/thumb/men/47.jpg',
     submitter: 'John Denver'
   }, {
+    id: 2,
     tag: 'reactjs',
     title: 'React',
     description: 'React has been designed from the start for gradual adoption, and you can use as little or as much React as you need. Whether you want to get a taste of React, add some interactivity to a simple HTML page, or start a complex React-powered app, the links in this section will help you get started.',
@@ -18,6 +20,7 @@ window.Seed = (function () {
     avatar: 'https://randomuser.me/api/portraits/thumb/women/26.jpg',
     submitter: 'Regina Perez'
   }, {
+    id: 3,
     tag: 'angularjs',
     title: 'Angular',
     description: 'Angular is a platform that makes it easy to build applications with the web. Angular combines declarative templates, dependency injection, end to end tooling, and integrated best practices to solve development challenges. Angular empowers developers to build applications that live on the web, mobile, or the desktop',
@@ -27,6 +30,7 @@ window.Seed = (function () {
     avatar: 'https://randomuser.me/api/portraits/thumb/men/55.jpg',
     submitter: 'Jim Snow'
   }, {
+    id: 4,
     tag: 'svelte',
     title: 'Svelte',
     description: 'The magical disappearing UI framework. Svelte turns your templates into tiny, framework-less vanilla JavaScript.',
