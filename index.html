@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>UpVote!</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+  <link rel="stylesheet" href="./style.css">
   <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
 </head>
 
@@ -20,32 +21,34 @@
     <div id="app">
       <h3 class="subtitle has-text-centered">Vote for Your favorite framework</h3>
 
-      <article v-for="submission in sortedSubmissions" v-bind:key="submission.id" class="media">
-        <figure class="media-left is-hidden-mobile">
-          <div class="image is-64x64">
-            <img v-bind:src="submission.submissionImage">
+      <div class="container">
+        <article v-for="submission in sortedSubmissions" v-bind:key="submission.id" class="media" v-bind:class="{ 'outline-blue': submission.votes >= 20 }">
+          <figure class="media-left">
+            <div class="image is-64x64">
+              <img v-bind:src="submission.submissionImage">
+            </div>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <p>
+                <strong>{{ submission.title }}</strong> <small><a v-bind:href="submission.url">{{ submission.url }}</a></small> <small class="tag is-primary">{{ submission.tag }}</small>
+                <br>
+                {{ submission.description }}
+              </p>
+              <p>Submitted by: <img class="image is-24x24" v-bind:src="submission.avatar" alt="user photo">
+                {{ submission.submitter }}</p>
+            </div>
           </div>
-        </figure>
-        <div class="media-content">
-          <div class="content">
-            <p>
-              <strong>{{ submission.title }}</strong> <small><a v-bind:href="submission.url">{{ submission.url }}</a></small> <small class="tag is-primary">{{ submission.tag }}</small>
-              <br>
-              {{ submission.description }}
-            </p>
-            <p>Submitted by: <img class="image is-24x24" v-bind:src="submission.avatar" alt="user photo">
-              {{ submission.submitter }}</p>
+          <div class="media-right has-text-centered">
+            <button v-on:click="upvote(submission.id)" class="button is-link is-outlined">
+              <span class="icon">
+                <i class="far fa-thumbs-up"></i>
+              </span>
+            </button>
+            <p class="has-text-link has-text-centered">{{ submission.votes }}</p>
           </div>
-        </div>
-        <div class="media-right has-text-centered">
-          <button v-on:click="upvote(submission.id)" class="button is-link is-outlined">
-            <span class="icon">
-              <i class="far fa-thumbs-up"></i>
-            </span>
-          </button>
-          <p class="has-text-link has-text-centered">{{ submission.votes }}</p>
-        </div>
-      </article>
+        </article>
+      </div>
 
     </div>
   </main>
